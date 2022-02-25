@@ -42,18 +42,20 @@ function App() {
             const [row, col,] = change;
             console.log(change);
             if (source === "edit") {
-                console.log("set Invalid");
-
+                
                 // not working.
+                // console.log("set Invalid");
                 // hotInstance.setCellMeta(row, col, "valid", false);
                 // hotInstance.render();
-
+                
                 // not working.
-                // hotInstance.setCellMeta(row, col, "className", "invalid-cell");
-                // hotInstance.render();
-
+                console.log("call setCellMeta");
+                hotInstance.setCellMeta(row, col, "className", "invalid-cell");
+                hotInstance.render();
+                
                 // It works, but the background color doesn't change.
-                hotInstance.getCell(row, col).classList.add("invalid-cell");
+                // console.log("add class");
+                // hotInstance.getCell(row, col).classList.add("invalid-cell");
             } else if (source === "modal") {
                 console.log("remove Invalid");
                 // hotInstance.setCellMeta(row, col, "valid", true);
