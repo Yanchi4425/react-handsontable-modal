@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React from "react";
 import { Modal } from "react-responsive-modal";
 import "react-responsive-modal/styles.css";
 import * as Hot from "@handsontable/react";
@@ -39,7 +39,7 @@ function App() {
         if (!hotRef.current) return false;
         const hotInstance = hotRef.current.hotInstance;
         for (const change of changes) {
-            const [row, col, oldVal, value] = change;
+            const [row, col,] = change;
             console.log(change);
             if (source === "edit") {
                 console.log("set Invalid");
